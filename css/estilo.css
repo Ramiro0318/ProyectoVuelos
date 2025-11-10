@@ -424,15 +424,13 @@ main .avion {
 .primera-clase th, .segunda-clase th, .tercera-clase th {
     text-align: center;
     vertical-align: text-top;
-    width: 1.5em;
 }
 
 .primera-clase td, .segunda-clase td, .tercera-clase td {
     text-align: center;
-    height: 2.8em;
-    width: 1.5em;
-    /* border-radius: 1em 1em 0 0; */
+    height: 2.8em; 
 }
+
 
 .b-primera-clase::before, .b-segunda-clase::before, .b-tercera-clase::before,
 .b-libre::before, .b-seleccionado::before, .b-ocupado::before {
@@ -460,15 +458,24 @@ main .avion {
 }
 
 .primera-clase td:nth-child(3), .primera-clase th:nth-child(3) {
-    border-right: 1em solid var(--colorPrimeraClase);
+    border-right: 0.5em solid var(--colorPrimeraClase);
+}
+.primera-clase td:nth-child(4), .primera-clase th:nth-child(3) {
+    border-left: 0.5em solid var(--colorPrimeraClase);
 }
 
 .segunda-clase td:nth-child(3) {
-    border-right: 1em solid var(--colorSegundaClase);
+    border-right: 0.5em solid var(--colorSegundaClase);
+}
+.segunda-clase td:nth-child(4) {
+    border-left: 0.5em solid var(--colorSegundaClase);
 }
 
 .tercera-clase td:nth-child(3) {
-    border-right: 1em solid var(--colorTerceraClase);
+    border-right: 0.5em solid var(--colorTerceraClase);
+}
+.tercera-clase td:nth-child(4) {
+    border-left: 0.5em solid var(--colorTerceraClase);
 }
 
 
