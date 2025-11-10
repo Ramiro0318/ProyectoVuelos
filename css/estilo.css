@@ -1,0 +1,629 @@
+:root {
+    --aero: #3779ba;
+    --aeroLight: #e5f1fd;
+    --PrincipalClaro : #517ac4;
+    --botonAceptar : #0d6efd;
+    --botonAceptarHover : #227bff;
+
+    /* --TextoClaro: #e6f0f1; */
+    --fondo : #f8f9fa; 
+
+    --Verde : #00b050;
+    --Amarillo : #ffff00;
+    --Naranja : #ed6631;
+    --Rojo : #ff0000;
+
+    --fondoCampoGris: #f8f9fa;
+    --bordeCampoGris: #dee2e6;
+    --colorboton : #F0F0F0;
+    --textoCampoGris: #6c757d;
+    --texto: #212529;
+    --textoSmall: #212529BF;
+    --campoBorder: #dee2e6;
+
+    --colorPrimeraClase :#D4AF37;
+    --colorSegundaClase :#003366;
+    --colorTerceraClase :#556B2F;
+    /* background-color: #CCCCCC;
+background-color: #6A0DaD; */
+}
+
+html, body {
+    background-color: var(--fondo);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+    width: calc(100% - 2em);
+    border-bottom: 1px solid var(--bordeCampoGris);
+    box-shadow: 2px 3px 5px var(--textoCampoGris);
+    padding: 1em 1em;
+}
+
+header h1 {
+    margin: 0 auto;
+    text-align: center;
+    justify-self: center;
+}
+
+header a:first-child{
+    margin-right: auto;
+}
+
+header a:last-child {
+    margin-left: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+}
+
+img {
+    align-self: flex-start;
+    width: 6em;
+    height: 100%;
+}
+
+a {
+   text-decoration: none; 
+}
+header a {
+    justify-self: flex-end;
+    color: var(--botonAceptar);
+}
+
+nav i {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    margin-top: 0.3em;
+    vertical-align: bottom;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+h1 {
+    display: block;
+    align-self: center;
+    text-align: center;
+    justify-self: center;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    margin: 1em;
+    
+}
+
+.filtros {
+    padding: 0.5em 1em;
+    border: 2px solid var(--textoSmall);
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: auto minmax(0,1fr) minmax(1fr);
+    grid-template-rows: 1fr auto;
+    box-shadow: 2px 6px 6px var(--bordeCampoGris);
+    overflow: scroll;
+}
+
+
+.filtros h2 {
+    grid-column: span 3;
+}
+
+.filtros div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+.filtros label {
+    margin-bottom: 0.2em;
+}
+
+input, select {
+    vertical-align: middle;
+    border: 1px solid var(--texto);
+    padding: 2px 2px 5px 2px;
+    border-radius: 5px;
+}
+
+.vuelo {
+    font-family: 'Space Grotesk', sans-serif;
+    border: 2px solid var(--textoSmall);
+    border-radius: 1em;
+    margin: 1em;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    min-height: 7em;
+    padding: 0.6em;
+    background: white;
+}
+
+.vuelo div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    margin-top: 0.5em;
+    margin: 0 0.3em;
+
+}
+
+.vuelo span {
+    align-content: center;
+    margin-top: 0.5em;
+}
+
+.vuelo .ciudades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+.vuelo .precio-vuelo, .estadistica-principal {
+    font-size: 1.3em;
+    font-weight: normal;
+    margin: 0;
+}
+
+.vuelo a {
+    grid-column: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid black;    
+    border-radius: 1em;
+    text-align: center;
+    color: white;
+    background-color: var(--botonAceptar);
+    height: 60%;
+    max-height: 2.8em;
+    width: 80%;
+    margin: 1.5em;
+    font: inherit;
+    font-weight: bold;
+}
+
+
+.vuelo a:hover {
+    box-shadow: 2px 2px 5px var(--textoCampoGris);
+    background-color: var(--botonAceptarHover);
+
+}
+
+.vuelo .estadistica {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: start;
+    margin: 0.8em 0.5em 0em 0.5em;
+    margin-top: 1px solid black;
+}
+
+.vuelo .estadistica strong {
+    padding-left: 0.6em;
+}
+.estadistica span {
+    width: 80%;
+    height: 2em;
+    padding: 0;
+}
+
+.vuelo .estadistica span {
+    margin: 0;
+}
+
+
+main.venta-boletos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.venta-boletos section:first-child {
+    position: relative;
+    grid-row: span 2;
+    width: 90%;
+    height: 100%;
+    max-width: 350px;
+    flex-direction: column;
+    background-color: var(--bordeCampoGris);
+    margin: 0;
+    border-right: 1px solid var(--textoSmall);
+    box-shadow: 2px 6px 6px var(--textoCampoGris);
+    justify-content: start;
+    padding: 0.5em 0em 0 0em;
+    
+}
+
+.boletos, .resumen, .subtotal {
+    padding: 0 0.5em;
+}
+
+.boletos {
+    width: calc( 100% -1em);
+
+    margin: 0;
+    align-items: center;
+}
+
+.boletos div {
+    margin-top: 0.5em;
+    min-height: 3em;
+}
+
+.boletos div select {
+    max-width: 90%;
+    width: 150px;
+}
+
+
+.resumen {
+    margin-top: 1em;
+}
+
+.resumen table {
+    display: block;
+    width: 100%;
+    border-radius: 1em;
+    align-self: center;
+    margin-left: auto;
+    justify-items: center;
+    border: 1px solid var(--textoCampoGris);
+    background-color: var(--fondoCampoGris);
+    font-size: 0.75em;
+    overflow-x: hidden;
+}
+
+
+.resumen table thead th {
+    border-bottom: 1px solid var(--textoCampoGris);
+}
+
+.resumen table tbody {
+    border-spacing: 0px 0px;
+    text-align: center;
+    vertical-align:top;
+    
+}
+
+.error {
+    margin: 1em 0;
+    font-size: 1em;
+    text-align: center;
+    align-self: center;
+    color: var(--Rojo);
+    display: none;
+}
+
+
+.total {
+    /* position: fixed; */
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    font-size: 1.2em;
+    background-color: #003366;
+    /* padding: 0.3em; */
+}
+
+.total span {
+    grid-column: span 2;
+    margin: 0.2em 0.5em 0.5em 0.5em;
+}
+
+.total button, .total a {
+    font-size: 0.8em;
+    margin: 0.2em 0.4em;
+    border-radius: 0.2em;
+}
+
+.total a { 
+    border: 1.6px outset black;
+    color: black;
+    background-color: var(--fondoCampoGris);
+    text-align: center;
+}
+.total a:hover {
+    background-color: rgb(232, 125, 125);
+    color: var(--textoCampoGris);
+    box-shadow: 2px 2px 4px var(--textoSmall);
+}
+
+.total button:hover {
+   color: var(--textoCampoGris);
+   box-shadow: 2px 2px 4px var(--textoSmall);
+}
+
+main .informacion {
+    z-index: 0;
+    width: calc(100% - 1.5em);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--aeroLight);
+    padding: 1em 0 1em 0.5em;
+    margin: 0;
+}
+
+.informacion .id {
+    font-weight: bold;
+}
+
+.informacion .direccion {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0.5em 0;
+}
+
+.direccion i {
+    display: block;
+}
+
+.informacion div {
+    display: flex;
+    flex-direction: column;
+}
+
+main .avion {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 1em);
+    height: calc(100% - 2em);
+    align-self: flex-start;
+    padding: 1em 0 1em 0;
+    margin: 0;
+}  
+
+.avion table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.primera-clase, .segunda-clase, .tercera-clase {
+    color: gray;
+    padding: 2em 1em;
+}
+
+.primera-clase th, .segunda-clase th, .tercera-clase th {
+    text-align: center;
+    vertical-align: text-top;
+    width: 1.5em;
+}
+
+.primera-clase td, .segunda-clase td, .tercera-clase td {
+    text-align: center;
+    height: 2.8em;
+    width: 1.5em;
+    /* border-radius: 1em 1em 0 0; */
+}
+
+.b-primera-clase::before, .b-segunda-clase::before, .b-tercera-clase::before,
+.b-libre::before, .b-seleccionado::before, .b-ocupado::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin: 0.2em 0.4em;
+    box-shadow: 3px 2px 2px var(--aero);
+}
+
+.b-libre::before, .b-seleccionado::before, .b-ocupado::before {
+    border-radius: 0.4em 0.4em 0 0;
+}
+
+.primera-clase, .b-primera-clase::before {
+    background-color: var(--colorPrimeraClase);
+}
+.segunda-clase, .b-segunda-clase::before {
+    background-color: var(--colorSegundaClase);   
+}
+.tercera-clase, .b-tercera-clase::before{
+    background-color: var(--colorTerceraClase);
+}
+
+.primera-clase td:nth-child(3), .primera-clase th:nth-child(3) {
+    border-right: 1em solid var(--colorPrimeraClase);
+}
+
+.segunda-clase td:nth-child(3) {
+    border-right: 1em solid var(--colorSegundaClase);
+}
+
+.tercera-clase td:nth-child(3) {
+    border-right: 1em solid var(--colorTerceraClase);
+}
+
+
+.libre, .b-libre::before {
+    background-color: var(--bordeCampoGris);
+}
+.seleccionado, .b-seleccionado::before {
+    background-color: var(--Verde);
+    color: white;
+}
+
+.ocupado, .b-ocupado::before {
+    background-color: var(--Naranja);
+    color: var(--Naranja);
+}
+
+.precios {
+    background-color: var(--fondoCampoGris);
+    border: 1px solid var(--textoCampoGris);
+    align-self: flex-start;
+    width: calc(100% - 1em);
+    border-radius: 0.4em;
+    margin: 1em 0;
+}
+
+
+@media (min-width : 640px) {
+   
+    
+    .filtros {
+        display: grid;
+        grid-template-columns: auto minmax(0,1fr) minmax(1fr);
+        grid-template-rows: 1fr auto;
+        gap: 0.5em 0.5em;
+        overflow: auto;
+        width: 80%;
+        max-width: 75em;
+        align-self: center;
+    }
+
+    .vuelos{
+        width: 80%;
+        max-width: 75em;
+        align-self: center;
+    }
+
+    .vuelo a{
+        grid-column: 3;
+    }
+
+    div .estadistica {
+        grid-column: span 2;
+        
+    }
+
+    div .estadistica span {
+        width: inherit;
+        vertical-align: middle;
+    }
+    div .estadistica div {
+        width: max-content;
+        flex-direction: row;
+        gap: 0.5em
+    }
+
+    .venta-boletos {
+        overflow: hidden;
+   }
+
+    .venta-boletos section:first-child {
+        position: relative;
+        grid-row: span 2;
+        width: 90%;
+        height:100%;
+        z-index: 2;    
+    }
+
+    .total {
+        position: inherit;
+        width: 100%;
+        margin-top: auto;
+        bottom: 0;
+        align-self: flex-end;
+
+    }
+
+    main.venta-boletos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: 100vh
+        
+    }
+    .resumen table {
+        font-size: 1.1em
+    }
+
+    main .informacion {
+        margin: 2em auto 0 auto;
+        height: fit-content;
+        max-width: 250px;
+    }
+
+    main .avion {
+        margin: 2em 0;
+        padding: 0;
+        max-height: fit-content;
+        height: calc(100% - 4em);
+    }
+}
+
+@media (min-width : 740px) {
+    
+    main {
+        /* max-width: 1000px; */
+        width: 100%;
+    }
+
+    section {
+        margin: 2em 1em;
+    }
+
+    .filtros, .vuelos {
+        max-width: 75em;
+    }
+
+    .vuelo .ciudades{
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+    }
+
+    .resumen table {
+        border-spacing: 1em 0.5em;
+    }
+
+    .error {
+        font-size: 1.3em;
+    }
+
+    .total {
+        font-size: 1.8em;
+    }
+
+    main .informacion {
+        max-width: 250px;
+    }
+    main .avion {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-y: scroll;
+    
+    }
+
+
+}
+
