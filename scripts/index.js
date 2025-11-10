@@ -335,8 +335,7 @@
         }
         else {
           compras.forEach(dato => {
-            
-            let v = `<div id ="${dato.id}" class="vuelo">
+            let v = `<div id ="${dato.id}" class="vuelo" data-salida=${dato.salida.ciudad} data-destino=${dato.llegada.ciudad}>
                           <span class="ciudades">
                               <strong>${dato.salida.ciudad}</strong>
                               <i class="fa-solid fa-arrow-right"></i>
